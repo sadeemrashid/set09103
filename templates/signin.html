@@ -1,0 +1,37 @@
+ <title>Sign In </title>
+{% extends "base.html" %}
+   
+
+{% block body %}
+
+<article class="card-body mx-auto col-lg-4 col-md-4 col-sm-12">
+
+	<h4 class="card-title mt-3 text-center">Login</h4>
+
+	<form action="{{ url_for('submit_login') }}" method="post">
+
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="email" class="form-control" placeholder="Email address" type="email" required>
+    </div>
+
+        <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" name="password" placeholder="Enter password" type="password" required>
+    </div>
+
+    <br>
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block"> Sign In  </button>
+    </div>
+        <br>
+        <br>
+    <p class="text-center">Have not an account? <a href="{{ url_for('signup') }}">Sign Up</a> </p>
+    </form>
+</article>
+
+{% endblock  %}

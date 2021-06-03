@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+    <title>Store </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<style media="screen">
+  .button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button2 {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+update_btn {
+    text-align: right;
+    padding-right: 40px;
+}
+
+</style>
+<style>
+.round{
+    border-radius:10%;
+}
+.mybtn{
+    padding-right:170px;
+    background-color:#1599DF;
+    border-color:black;
+    padding-top:8px;
+    padding-bottom:8px;
+
+}
+.mybtn:hover{
+
+    background-color:#4BBFF5;
+}
+.mybtn2{
+    padding-right:170px;
+    background-color:#4BBFF5;
+    border-color:black;
+    padding-top:8px;
+    padding-bottom:8px;
+
+}
+.mybtn2:hover{
+    background-color:#1599DF;
+}
+</style>
+
+<body>
+<br>
+        <div class="container" style="padding-top:10px;">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-6">
+                     <strong><h1 class="text-primary" style="font-family:Georgia, serif">Math Guide</h1></strong>
+                </div>
+               <div class="col-lg-4 col-md-4 col-sm-6 text-right">
+                    <a href="{{ url_for('cart_page') }}" class="text-dark"> <h4 class="fa fa-shopping-cart" aria-hidden="true"></h4></a>
+                   <a  class="text-dark">
+                        <h4 class="fa fa-bars" data-toggle="collapse"
+                            data-target="#mynav" aria-expanded="false"
+                            aria-controls="collapseExample"style="padding-left:5px;" aria-hidden="true"></h4></a>
+
+               </div>
+
+
+            </div>
+            <div class="collapse container text-center " id="mynav">
+             <a href="{{ url_for('index') }}" class="px-3">Home</a>
+             <a href="{{ url_for('contact_us') }}" class="px-3">Contact</a>
+             <a href="{{ url_for('books') }}" class="px-3">Store</a>
+             <a href="{{ url_for('course') }}" class="px-3">Courses</a>
+</div>
+        </div>
+
+<hr>
+
+
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 style="text-align:center;" class="panel-title">My Cart</h6>
+    </div>
+    <table class="table " id="dev-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Remove From Cart</th>
+
+
+        </tr>
+      </thead>
+
+
+
+
+
+
+
+            {% for p in products %}
+
+                      <tr class="cart-items">
+                    <td> {{p[1]}} </td>
+
+                <td><input  class="cart-price bg-white" readonly style="border:none;decoration:none;width:60px" value=" {{ p[3] }}" /> </td>
+                  <td ><input class="cart-quantity-input" value="1" type="number"  /></td>
+                  <td><input  class="mul-price bg-white"  value="0" readonly
+                              style="border:none;decoration:none;width:100%"  /> </td>
+                <td><a class="btn btn-danger btn-xs" href="{{ url_for('remove_cart',id=p[0]) }}">
+                    <span class="glyphicon glyphicon-trash"></span></a></td>
+              </tr>
+            {% endfor %}
+
+
+
+
+
+
+
+
+
+
+
+    </table>
+  </div>
+
+<div class="update_btn">
+    <a href="{{ url_for('books') }}" class="btn btn-success">Continue Shopping</a>
+  </div>
+
+</div>
+<br><br><br>
+<div style="text-align: center;">
+  <form action="" method="get">
+  <input   id="results" hidden name="rslt"/>
+  <label  class="button button2 " id="result">0</label>
+  <button class="button" ><span>Purchase </span></button>
+  </form>
+
+</div>
+
+
+
+<br><br><br><br><br>
+
+<script>
+
+var quantityInputs = document.getElementsByClassName('cart-quantity-input')
+var single_price = document.getElementsByClassName('cart-price')
+var cart_multi_price = document.getElementsByClassName('mul-price')
+var list = [];
+
+    for (var  i = 0; i < quantityInputs.length; i++){
+        const source = quantityInputs[i];
+        var obj = {inp:quantityInputs[i], index:i};
+        list.push(obj)
+        const inputHandler = function(e){
+         var total = 0
+         var input = event.target
+         if (isNaN(input.value) || input.value < 0) {
+            input.value = -1 * input.value
+        }
+        for (var  i = 0; i < list.length; i++){
+
+               if (e.target == list[i].inp) {
+                    total = total + (e.target.value * single_price[i].value)
+                    cart_multi_price[i].value = total
+               }
+         }
+
+            billing()
+        }
+
+        source.addEventListener('input', inputHandler);
+        }
+
+var cart_multi_price = document.getElementsByClassName('mul-price')
+  for (var  i = 0; i < cart_multi_price.length; i++){
+
+                cart_multi_price[i].value =  single_price[i].value
+
+         }
+         billing()
+        function billing(){
+        var cart_multi_price = document.getElementsByClassName('mul-price')
+        var bill= 0;
+             for (var  i = 0; i < cart_multi_price.length; i++){
+                bill= bill+ parseInt(cart_multi_price[i].value)
+
+         }
+         const result = document.getElementById('result');
+         const results = document.getElementById('results');
+         for (var  i = 0; i < list.length; i++){
+            result.innerHTML  = bill
+            results.value  = bill
+            console.log(results.value)
+         }
+        }
+</script>
+
+
+</body>
+</html>

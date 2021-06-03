@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+
+{% block body %}
+    <title>Contact us</title>
+<style>
+.carousel{
+
+    margin-top: 20px;
+}
+.carousel-item{
+    text-align: center;
+    min-height: 280px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+}
+</style>
+
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-lg-6 col-md-6 col-sm-12 text-left">
+            <h2 style="opacity:0.5;">About Us</h2>
+            <p>
+                This webesite was created in 2002. Our motive to make this website have been to help the children who want to eagerly learn maths. We are a small team all of which are highly qualified and due to which this learning app is being a success.
+                We originate from Edinburgh and soon plan to launch courses offering through live session supports.
+            </p>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-12 text-center p-3">
+            <br><br><br><br><br><br><br><br><br><br><br>
+               <a href="" class=" text-dark px-1"><i class="fab fa-twitter h5"></i></a>
+               <a href="" class=" text-dark px-1"><i class="fab fa-instagram h5"></i></a>
+               <a href="" class=" text-dark px-1"><i class="fab fa-facebook-f h5"></i></a>
+        </div>
+
+    </div>
+</div>
+
+<div class="container text-center">
+    <br>
+        <p class="h3">Testimonials</p>
+
+        <div class="container-lg my-3">
+    <div id="myCarousel" class="carousel slide"  style="background-color:#C8C8C8"  data-ride="carousel">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="container">
+                    <br><br><br>
+                        <div class="row justify-content-center">
+                            <div class="bg-light p-3 col-lg-4 float-center">
+                                <p class="">"Great !!!"</p>
+                                <div class="float-left">
+                                    <i class="fas fa-user  px-3"></i><span>Albert John</span>
+                                <br>
+                                <span><strong>Parent</strong> of Sudais</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                </div>
+            </div>
+            <div class="carousel-item bg-light">
+                    <div class="container">
+                    <br><br><br>
+                        <div class="row justify-content-center">
+                            <div class="p-3 col-lg-4 float-center" style="background-color:#C8C8C8">
+                                <p class="">"The quiz after the knowledge is a good way of teaching"</p>
+                                <div class="float-left">
+                                    <i class="fas fa-user  px-3"></i><span>Ms Jane</span>
+                                <br>
+                                <span><strong>Parent</strong> of Will</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <br><br><br>
+                        <div class="row justify-content-center">
+                            <div class="bg-light p-3 col-lg-4 float-center">
+                                <p class="">"Ordered books from here , will recommend"</p>
+                                <div class="float-left">
+                                    <i class="fas fa-user  px-3"></i><span>Aubrey</span>
+                                <br>
+                                <span><strong>Parent</strong> of Sam</span>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+	<!-- Contact Info -->
+
+		<div class="contact_info_container">
+			<div class="container">
+				<div class="row">
+
+					<!-- Contact Form -->
+					<div class="col-lg-6">
+						<div class="contact_form">
+							<h3><div class="contact_info_title">Contact Form</div></h3>
+							<form action="#" class="comment_form">
+								<div>
+									<div class="form_title">Name</div>
+									<input type="text" class="comment_input" required="required">
+								</div>
+								<div>
+									<div class="form_title">Email</div>
+									<input type="text" class="comment_input" required="required">
+								</div>
+								<div>
+									<div class="form_title">Message</div>
+									<textarea class="comment_input comment_textarea" required="required"></textarea>
+								</div>
+								<div>
+									<button type="submit" class="comment_button trans_200">Submit now</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+					<!-- Contact Info -->
+					<div class="col-lg-6">
+						<div class="contact_info">
+							<h4><div class="contact_info_title">Contact Info</div></h4>							<div class="contact_info_location">
+								<h5><div class="contact_info_location_title">Edinburgh Site</div></h5>
+								<ul class="location_list">
+									<li>12 George Street</li>
+									<li>044-7398-9876</li>
+									<li>info.mathslearn@gmail.com</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+</div>
+
+{% endblock  %}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <title>E-Learning </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--    Icons   -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+<style>
+
+.mybtn{
+    padding-right:170px;
+    background-color:#1599DF;
+    border-color:black;
+    padding-top:8px;
+    padding-bottom:8px;
+
+}
+.mybtn:hover{
+
+    background-color:#4BBFF5;
+}
+.mybtn2{
+    padding-right:170px;
+    background-color:#4BBFF5;
+    border-color:black;
+    padding-top:8px;
+    padding-bottom:8px;
+	
+
+}
+
+.mybtn2:hover{
+    background-color:#1599DF;
+}
+</style>
+</head>
+<body>
+
+<br>
+<div class="container" style="padding-top:10px;">
+            <div class="row justify-content-between">
+                <div>
+                     <strong><h1 class="text-primary" style="font-family:Georgia, serif"><a href="{{ url_for('index') }}" class="px-3">MathGuide</a></h1></strong>
+                </div>
+               <div>
+
+			   
+                    <a href="{{ url_for('cart_page') }}" class="text-dark"> <h4 class="fa fa-shopping-cart" aria-hidden="true"></h4></a>
+
+                    <a  class="text-dark">
+                        <h4 class="fa fa-bars" data-toggle="collapse"
+                            data-target="#mynav" aria-expanded="false"
+                            aria-controls="collapseExample"style="padding-left:5px;" aria-hidden="true"></h4>
+				    </a>
+               </div>
+            </div>
+			
+
+    <div class="collapse container text-center " id="mynav">
+             <a href="{{ url_for('index') }}" class="px-3">Home</a>
+             <a href="{{ url_for('contact_us') }}" class="px-3">Contact</a>
+             <a href="{{ url_for('books') }}" class="px-3">Store</a>
+             <a href="{{ url_for('course') }}" class="px-3">Courses</a>
+</div> 
+
+
+        </div>
+<hr>
+
+{% block body %}
+
+{% endblock %}
+
+<br><br>
+<div class="container-fluid bg-light text-center p-5">
+    <h2>Contact Us</h2>
+        <p> Write us an email on <a>Mathslearn@gmail.com</a> or a direct message on one of the following :- </p>
+
+
+               <a href="" class=" text-dark px-4 "><i class="fab fa-twitter " style="font-size:100px"></i></a>
+               <a href="" class=" text-dark px-4 "><i class="fab fa-instagram " style="font-size:100px"></i></a>
+               <a href="" class=" text-dark px-4 "><i class="fab fa-facebook-f" style="font-size:100px"></i></a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+ <title>Sign Up </title>
+
+{% extends "base.html" %}
+
+
+{% block body %}
+<article class="card-body mx-auto col-lg-4 col-md-4 col-sm-12">
+
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+
+	<form method="post" action="{{ url_for('submit') }}">
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input name="name" class="form-control" placeholder="name" type="text" required>
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="email" class="form-control" placeholder="Email address" type="email" required>
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" name="password" placeholder="Create password" type="password" required>
+    </div>
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input class="form-control" placeholder="Repeat password" type="password" required>
+    </div>
+    <br>
+        <div class="form-group">
+            <h4>{{ msg }}</h4>
+        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    </div>
+        <br>
+
+        <br>
+    <p class="text-center">Have an account? <a href="{{ url_for('signin') }}">Log In</a> </p>
+</form>
+</article>
+
+{% endblock  %}

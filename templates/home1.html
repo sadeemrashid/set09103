@@ -1,0 +1,97 @@
+<title>Welcome </title>
+
+
+{% extends "base.html" %}
+    
+{% block body %}
+<div class="container bg-light" style="margin-top:-10px;">
+            <div class="row justify-content-between" style="padding:30px;">
+
+                <div style="padding:30px;" class="col-lg-6 col-md-6 col-sm-12">
+                    <br><br>
+                     <b><strong><p class="h1">Maths made fun  <br>like never before</p></strong></b>
+                    <br>
+                    <p class="h5" style="opacity:0.4;">Learn how to do things faster and better</p>
+                    <br><br><br>
+                   <strong><p class="" style="opacity:0.4;">you will  master high school maths with us</p></strong>
+                </div>
+
+
+               <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img class="round" height="370" width="100%" src="{{ url_for('static', filename='teach_std.jpg')}}" />
+               </div>
+
+            </div>
+
+            <div class="container">
+                <div class="row">
+
+                        <div class="col-lg-5 col-md-6 col-sm-12"></div>
+
+                        <div class="col-lg-7 col-md-6 col-sm-12">
+
+
+                        </div>
+                </div>
+            </div>
+<br>
+<br>
+        </div>
+<hr>
+<div class="container">
+        <h5>COURSE DESCRIPTION</h5>
+         <br><br>
+            <div class="row justify-content-between">
+
+                <div class="col-lg-5 col-md-6 col-sm-12">
+                    <h3>Who Is This Course For?</h3>
+
+                    <p class="justify-content">
+                     This Course is for secondary school students who are eager to learn maths .
+
+                    </p>
+                </div>
+
+
+                   <div class="col-lg-5 col-md-6 col-sm-12">
+                     <h3>What's In This Course?</h3>
+
+                    <p class="justify-content">
+
+                    In this course you will be able to learn 3 topics in which you you get to lear text based knowledge , you have links to videos
+					and there is a short quiz after .
+
+                    </p>
+                </div>
+
+            </div>
+        </div>
+<hr>
+<div class="container text-center">
+        <h3>What you'll Learn </h3>
+         <br><br>
+            <div class="row justify-content-between">
+<br>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img class="round" src="{{ url_for('static', filename='idea.png')}}" />
+                    <h4>Algebra</h4>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img class="round" src="{{ url_for('static', filename='idea.png')}}" />
+                    <h4>Probability</h4>
+                </div>
+
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <img class="round" src="{{ url_for('static', filename='idea.png')}}" />
+                    <h4>Area and <br>Volume</h4>
+                </div>
+
+
+
+
+            </div>
+        </div>
+<br>
+
+{% endblock  %}

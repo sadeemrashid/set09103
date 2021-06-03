@@ -1,0 +1,81 @@
+
+<title> Courses </title>
+{% extends "base.html" %}
+{% block body %}
+
+
+<div class="container bg-light p-3">
+
+                         <div style="background-color:White;color:Black;padding:20px;">
+                     <h2>Algebra</h2>
+                     <p> Algebra is one of the broad parts of mathematics, together with number theory, geometry and analysis. In its most general form, algebra is the study of mathematical symbols and the rules for manipulating these symbols; it is a unifying thread of almost all of mathematics.</p>
+                       <p> Example question to how to solve: If you have been given an equation where x is = 3 and the equation is 2x+1 we just substitute 'x' with '3' so
+					       first step is 2(3)+1 , secondly multiply 2 with 3 you get 6 so now 6+1 , lastly you add the two integers and you get 7.
+						   Objective: Solve two-step equations by balancing and using inverse opperations.
+                           After mastering the technique for solving equations that are simple one-step equations, we are ready to consider two-step equations. As we solve two-step equations, the important thing to remember is that everything works backwards!
+                           When working with one-step equations, we learned that in order to clear a “plus
+                           five” in the equation, we would subtract five from both sides. We learned that to
+                           clear “divided by seven” we multiply by seven on both sides. The same pattern
+                           applies to the order of operations. When solving for our variable x, we use order
+                           of operations backwards as well. This means we will add or subtract first, then
+                           multiply or divide second.
+						   </p>
+						   <iframe width="560" height="315" src="https://www.youtube.com/embed/NybHckSEQBI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						</div> 
+						
+						
+						
+						<div style="background-color:White;color:Black;padding:20px;">
+                       <h2>Probability</h2>
+                      <p>In this chapter, we shall first consider chance experiments with a finite number of
+                         possible outcomes ω1, ω2, . . . , ωn. For example, we roll a die and the possible
+                         outcomes are 1, 2, 3, 4, 5, 6 corresponding to the side that turns up. We toss a coin
+                         with possible outcomes H (heads) and T (tails).
+                         It is frequently useful to be able to refer to an outcome of an experiment. For
+                         example, we might want to write the mathematical expression which gives the sum
+                         of four rolls of a die. To do this, we could let Xi, i = 1, 2, 3, 4, represent the values
+                         of the outcomes of the four rolls, and then we could write the expression X1 + X2 + X3 + X4
+                         for the sum of the four rolls. The Xi’s are called random variables. A random variable is simply an expression whose value is the outcome of a particular experiment.
+                         Just as in the case of other types of variables in mathematics, random variables can take on different values.</p>
+						 <iframe width="560" height="315" src="https://www.youtube.com/embed/KzfWUEJjG18" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> 
+						
+
+
+
+                      <div style="background-color:White;color:Black;padding:20px;">
+                     <h2>Area and Volume</h2>
+                      <p>Wherever we look, usually we see solids. So far, in all our study, we have been dealing with figures that can be easily drawn on our notebooks or blackboards. These are
+                         called plane figures. We have understood what rectangles, squares and circles are,
+                         what we mean by their perimeters and areas, and how we can find them. We have
+                         learnt these in earlier classes. It would be interesting to see what happens if we cut
+                         out many of these plane figures of the same shape and size from cardboard sheet and
+                         stack them up in a vertical pile. By this process, we shall obtain some solid figures
+                         (briefly called solids) such as a cuboid, a cylinder, etc. In the earlier classes, you have
+                         also learnt to find the surface areas and volumes of cuboids, cubes and cylinders. We
+                         shall now learn to find the surface areas and volumes of cuboids and cylinders in 
+                         details and extend this study to some other solids such as cones and spheres.</p>
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/qJwecTgce6c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div> 
+												
+
+
+                     <div style="background-color:White;color:Black;padding:20px;">
+                     <h3>Bored with all the studying ?</h3>
+                      <p>How about playing a fun math game</p>
+                     <iframe src='https://www.embed.com/app/math-game/' style='width: 800px; height: 600px;' scrolling='no' frameBorder='0'></iframe>
+                     </div>
+						
+						
+							  <h3 class="text-success">Quiz and For Further Information</h3>
+						    <div class="row  justify-content-between p-3">
+                            {% for c in courses %}
+                            <div class="p-3 col-lg-4 float text-center" style="background-color:#C8C8C8"
+                                <h3 class="text-success">{{ c[0] }}</h3>
+                                <p class="text-black "><strong>Topic Link: </strong><a  target="_blank" href="{{ c[1] }}"> {{ c[1] }}</a></p>
+                                <p class="text-black "><strong>Take Quiz:</strong> <a class="btn btn-success" target="_blank" href="{{ url_for('quiz',id =c[2]) }}"> Take Quiz</a></p>
+						   </div>
+						   	{% endfor %}
+							</div>
+    </div>
+ {% endblock  %}

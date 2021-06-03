@@ -1,0 +1,44 @@
+<title>Store </title>
+{% extends "base.html" %}
+
+{% block body %}
+     <div class="container text-center">
+        <h2>Books</h2>
+         <br><br>
+            <div class="row justify-content-between">
+
+                <div class="col-lg-3 col-md-3 col-sm-12 text-center border p-2 rounded">
+                    <h3 class="text-primary">Maths Book 1</h3>
+                   <img class="round" height="200" width="100%" src="{{ url_for('static', filename='maths/1.jpg')}}" />
+                   <br>
+
+                    <br> <a class="btn btn-primary" href="{{ url_for('cart',id=1) }}">Add To Cart</a>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 text-center border p-2 rounded">
+                    <h3 class="text-primary">Maths Book 2</h3>
+                   <img class="round" height="200" width="100%" src="{{ url_for('static', filename='maths/2.jpg')}}" />
+                   <br>
+
+                    <br> <a class="btn btn-primary" href="{{ url_for('cart',id=2) }}">Add To Cart</a>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 text-center border p-2 rounded">
+                    <h3 class="text-primary">Maths Book 3</h3>
+                   <img class="round" height="200" width="100%" src="{{ url_for('static', filename='maths/3.jpg')}}" />
+
+                    <br><br> <a class="btn btn-primary" href="{{ url_for('cart',id=3) }}">Add To Cart</a>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 text-center border p-2 rounded">
+                    <h3 class="text-primary">Maths Book 4</h3>
+                   <img class="round" height="200" width="100%" src="{{ url_for('static', filename='maths/4.jpg')}}" />
+
+                    <br><br> <a class="btn btn-primary" href="{{ url_for('cart',id=4) }}">Add To Cart</a>
+                </div>
+                
+
+
+            </div>
+        </div>
+{% endblock  %}

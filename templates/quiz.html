@@ -1,0 +1,34 @@
+    <title>Quiz </title>
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container border">
+    <div class=" p-4">
+        <div class="container bg-success text-center text-white p-2">
+            <h2 class="">Questions practice</h2>
+        </div>
+
+        <br><br>
+
+        {% for q in questions %}
+            <p><strong class="h5">Question:</strong><span> {{q[1]}}</span></p>
+           <strong>Option1: </strong> <input type="radio" class="{{q[1]}}"  name="{{q[1]}}" ><span class="px-2">{{q[2]}}</span><br>
+           <strong>Option2: </strong> <input type="radio" class="{{q[1]}}"  name="{{q[1]}}" ><span class="px-2">{{q[3]}}</span><br>
+           <strong>Option3: </strong> <input type="radio" class="{{q[1]}}"  name="{{q[1]}}" ><span class="px-2">{{q[4]}}</span><br>
+           <strong>Option4: </strong> <input type="radio" class="{{q[1]}}"  name="{{q[1]}}" ><span class="px-2">{{q[5]}}</span><br>
+            <div class="collapse" id="{{q[1]}}">
+               <input   value="{{q[6]}}" readonly>
+            <br>
+            <br>
+            </div>
+                <button class="btn btn-success float-center"data-toggle="collapse" data-target="#{{q[1]}}" aria-expanded="false" aria-controls="collapseExample">Show answer</button>
+            <br>
+        <hr>
+        {% endfor %}
+
+    </div>
+
+</div>
+
+{% endblock  %}
